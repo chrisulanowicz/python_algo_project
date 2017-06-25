@@ -6,21 +6,30 @@
 #f6f6f6 off white
 */
 
-* {
-  /*font-size: 14px;*/
-}
-
 body {
   background-color: #363636;
   color: #cecdce;
-  /*padding-top: 2em;*/
   padding-top: 70px;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
+}
+
+.bodyDay {
+  background-color: #cecdce;
+  color: #363636;
 }
 
 nav, footer {
   font-family: "Gill Sans";
   font-weight: 100;
+}
+
+#solution {
+  width: 95%;
+  min-height: 330px;
+}
+
+#solutions_div {
+  display: none;  /* solution is hidden by default */
 }
 
 h1{
@@ -36,7 +45,7 @@ h4 {
   font-size: 1.2em;
 }
 h1, h2, h3, h4 {
-  color: #d3ea00;
+  /*color: #d3ea00;*/
   margin-top: 0;
 }
 
@@ -60,7 +69,9 @@ a:hover {
 
 .inline-block {
   display: inline-block;
-  margin: 0 3em;
+  /*margin: 0 3em;*/
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 .side-margin {
@@ -70,7 +81,8 @@ a:hover {
 
 .btn {
   color: #363636;
-  background-color: #d3ea00;
+  /*background-color: #d3ea00;*/
+  background-color: #D24F28;
   padding: 0.2em 0.5em;
   font-size: 1em;
   margin-bottom: 0.3em;
@@ -79,7 +91,8 @@ a:hover {
 }
 
 .btn:hover {
-  background-color: #edfe4f;
+  /*background-color: #edfe4f;*/
+  background-color: #FF9070;
 }
 
 .btn:focus, .btn:active {
@@ -87,11 +100,11 @@ a:hover {
 }
 
 textarea {
-  padding: 5px 10px;
+  /*padding: 5px 10px;
   border: none;
   border-radius: 5px;
   font-size: inherit;
-  width: 90%;
+  width: 90%;*/
 }
 
 .form-control {
@@ -114,15 +127,6 @@ input[type=checkbox] {
 }
 input[type=checkbox], input[type=checkbox]:focus, input[type=checkbox]:active {
   outline: none;
-}
-
-.checkbox {
-  /*background-color: red ;
-  background: red ;
-  color: red ;
-  height: 20px;
-  width: 20px;
-  padding: 10px ;*/
 }
 
 .solution {
