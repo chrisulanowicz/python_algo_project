@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  console.log('ready!');
+  // console.log('ready!');
 
   var night = true;
 
@@ -9,13 +9,10 @@ $(document).ready(function(){
   var solutions = {};
 
   var heightUpdateFunction = function(edt, div) {
-    console.log(edt);
 		// http://stackoverflow.com/questions/11584061/
     // var newHeight = edt.getSession().getScreenLength() * (edt.renderer.lineHeight + 5) + edt.renderer.scrollBar.getWidth();
 		var newHeight = edt.getSession().getScreenLength() * (21) + edt.renderer.scrollBar.getWidth();
 		$("#"+div).height(newHeight.toString() + "px");
-    console.log(edt.renderer.lineHeight);
-    console.log("new height for "+div+" is "+newHeight.toString() + "px");
 		// This call is required for the editor to fix all of
 		// its inner structure for adapting to a change in size
 		edt.resize();
@@ -33,7 +30,6 @@ $(document).ready(function(){
       solutions["solution"+i].container.style.lineHeight = 1.7
       $("#solution"+i).width("95%")
       $("#solution"+i).height("200px")
-      console.log(solutions["solution"+i]);
       heightUpdateFunction(solutions["solution"+i], "solution"+i);
     }
   }
