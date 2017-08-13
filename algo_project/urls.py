@@ -36,6 +36,6 @@ admin.site.register(Solution, SolutionAdmin)
 # admin.site.register(User, UserAdmin)
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^', include('apps.algo_app.urls')),
+    url(r'^admin/', admin.site.urls),  # route for Django admin
+    url(r'^', include('apps.algo_app.urls')),  # include the urls.py of specific apps (in this case, all routing other then admin goes to the app urls.py)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

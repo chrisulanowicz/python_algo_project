@@ -1,9 +1,18 @@
+# The models.py file contains the database schema and methods
+# It's divided into two primary sections:
+#   1) Manager classes that contain methods that query the database; these methods are called by the controller as needed
+#   2? Classes that define database tables and include basic validation
+
 from __future__ import unicode_literals
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.db import models
 from django.db.models.aggregates import Count
 from random import randint
 import bcrypt
+
+############################################################################
+# 1) "Manager" classes contain methods that query the database
+
 
 class AlgorithmManager(models.Manager):
     def get_all(self):
@@ -51,7 +60,7 @@ class AlgorithmManager(models.Manager):
     def get_random(self):
         count = self.aggregate(count=Count('id'))['count']
         random_index = randint(0, count - 1)
-        random_algo = self.all()[random_index]
+        # random_algo = self.all()[random_index]
         return self.all()[random_index]
 
     # def update(self, request):
@@ -211,6 +220,10 @@ class SolutionManager(models.Manager):
     #     if user.password == bcrypt.hashpw(request.POST['admin_password'].encode(), user.password.encode()):
     #         return True
     #     return False
+
+
+############################################################################
+# 2) Classes that define database tables and include basic validation
 
 class Algorithm(models.Model):
     name = models.CharField(max_length=255)

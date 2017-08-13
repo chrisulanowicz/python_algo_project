@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'apps.algo_app',
+    'apps.algo_app',  # include any apps related to the project here; in this case, just algo_app
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
